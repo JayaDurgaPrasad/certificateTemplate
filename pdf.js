@@ -7,14 +7,15 @@ const puppeteer = require('puppeteer');
   // Open a new page
   const page = await browser.newPage();
 
+  await page.addStyleTag({ path: 'index.css' });
 
-
-await page.goto(`file://D:/CODE/DOM/index.html`);
+  await page.goto(`C:/Users/JAYA DURGA PRASAD/Desktop/certificateTemplate/index.html`);
 
   // Generate the PDF file
   await page.pdf({
-    path: 'output1.pdf', // Output file path
+    path: 'output.pdf', // Output file path
     format: 'A4', // Page format
+    printBackground: true,
   });
 
   // Close the browser
@@ -22,3 +23,6 @@ await page.goto(`file://D:/CODE/DOM/index.html`);
 
   console.log('PDF generated successfully.');
 })();
+
+
+
