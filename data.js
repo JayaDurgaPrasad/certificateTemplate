@@ -49,14 +49,10 @@ const studentsList = [
 
   const issuerData = [
    {
-      Name: 'Alex Johnson',
+      name: 'Alex Johnson',
       companyName: 'Tech Innovations Ltd.',
       position: 'Data Scientist',
       date: '2023-03-10'
     }
   ];
   
- 
-module.exports = {
- studentsList, issuerData
-}
